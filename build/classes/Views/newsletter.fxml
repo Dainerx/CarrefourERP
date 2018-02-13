@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1100.0" stylesheets="@custom.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.NewsLetterController">
+    <children>
+        <StackPane prefHeight="680.0" prefWidth="1100.0">
+            <children>
+                <AnchorPane fx:id="holderAnchor" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <TableView fx:id="tableNewsletters" layoutX="24.0" layoutY="173.0" prefHeight="490.0" prefWidth="706.0">
+                            <columns>
+                                <TableColumn prefWidth="24.0" />
+                                <TableColumn fx:id="_id" prefWidth="119.0" text="ID" />
+                                <TableColumn fx:id="_subject" prefWidth="311.0" text="Subject" />
+                                <TableColumn fx:id="_content" prefWidth="326.0" text="Content" />
+                            </columns>
+                        </TableView>
+                        <AnchorPane layoutX="751.0" layoutY="49.0" prefHeight="611.0" prefWidth="320.0" styleClass="card-white">
+                            <children>
+                                <StackPane layoutX="47.0" layoutY="39.0" prefHeight="611.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                                <Pane prefHeight="180.0" prefWidth="320.0">
+                                                    <children>
+                                                        <ImageView fx:id="image" fitHeight="180.0" fitWidth="320.0" pickOnBounds="true">
+                                                            <image>
+                                                                <Image url="@../Img/carrefour.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label fx:id="lblName" alignment="CENTER" layoutX="15.0" layoutY="118.0" prefHeight="20.0" prefWidth="303.0" text="Enterprise Resource Planning" textFill="#31219e">
+                                                            <font>
+                                                                <Font name="Roboto Black" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </Pane>
+                                                <AnchorPane prefHeight="432.0" prefWidth="320.0">
+                                                    <children>
+                                                        <Separator layoutX="24.0" layoutY="125.0" prefHeight="0.0" prefWidth="290.0" />
+                                                        <Separator layoutX="34.0" layoutY="282.0" prefHeight="0.0" prefWidth="290.0" />
+                                                        <VBox layoutX="34.0" layoutY="40.0" prefHeight="85.0" prefWidth="269.0">
+                                                            <children>
+                                                                <Label fx:id="libSubject" prefHeight="30.0" prefWidth="273.0" text="Subject" textFill="#797878">
+                                                                    <font>
+                                                                        <Font name="Roboto Regular" size="14.0" />
+                                                                    </font>
+                                                                    <graphic>
+                                                                        <FontAwesomeIconView fill="#404bb6" glyphName="ENVELOPE" size="16.0" wrappingWidth="28.0" />
+                                                                    </graphic>
+                                                                </Label>
+                                                <JFXTextField fx:id="textSubject" prefHeight="40.0" prefWidth="263.0" />
+                                                            </children>
+                                                        </VBox>
+                                                        <Label layoutX="39.0" layoutY="319.0" prefHeight="20.0" prefWidth="115.0" text="Subscribed" textFill="#797878">
+                                                            <font>
+                                                                <Font name="Roboto Regular" size="14.0" />
+                                                            </font>
+                                                            <graphic>
+                                                                <FontAwesomeIconView fill="#404bb6" glyphName="USER" size="16.0" wrappingWidth="28.0" />
+                                                            </graphic>
+                                                        </Label>
+                                                        <VBox layoutX="32.0" layoutY="135.0" prefHeight="139.0" prefWidth="275.0">
+                                                            <children>
+                                                                <Label fx:id="libContent" maxHeight="176.0" maxWidth="287.0" minHeight="0.0" minWidth="0.0" prefHeight="34.0" prefWidth="275.0" text="Content" textFill="#797878">
+                                                                    <font>
+                                                                        <Font name="Roboto Regular" size="14.0" />
+                                                                    </font>
+                                                                    <graphic>
+                                                                        <FontAwesomeIconView fill="#404bb6" glyphName="LIST" size="16.0" wrappingWidth="28.0" />
+                                                                    </graphic>
+                                                                </Label>
+                                                <JFXTextArea fx:id="textContent" prefHeight="100.0" prefWidth="275.0" />
+                                                            </children>
+                                                        </VBox>
+                                                        <Label fx:id="libsubscribed" alignment="CENTER_RIGHT" layoutX="235.0" layoutY="319.0" prefHeight="17.0" prefWidth="70.0" text="0" textFill="#797878">
+                                                            <font>
+                                                                <Font name="Roboto Regular" size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Separator layoutX="38.0" layoutY="350.0" prefHeight="3.0" prefWidth="283.0" />
+                                          <JFXButton layoutX="38.0" layoutY="359.0" onAction="#deleteNewsLetter" prefHeight="25.0" prefWidth="275.0" style="-fx-background-color: #1581d3;" text="Delete" textFill="WHITE">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="TIMES_CIRCLE" size="18" translateX="70.0" translateY="1.0" wrappingWidth="19.0" />
+                                             </graphic></JFXButton>
+                                          <JFXButton layoutX="38.0" layoutY="395.0" onAction="#modifyNewsletter" prefHeight="21.0" prefWidth="275.0" style="-fx-background-color: #1581d3;" text="Modify" textFill="WHITE">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="PENCIL_SQUARE" size="18" translateX="70.0" translateY="1.0" wrappingWidth="19.0" />
+                                             </graphic></JFXButton>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </StackPane>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="26.0" layoutY="47.0" prefHeight="106.0" prefWidth="706.0" style="-fx-background-color: rgb(0, 115, 183,0.6); -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 5;">
+                            <children>
+                                <Pane layoutX="22.0" layoutY="-36.0" prefHeight="106.0" prefWidth="115.0" style="-fx-background-color: #0073B7; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4;">
+                                    <children>
+                                        <ImageView fitHeight="85.0" fitWidth="92.0" layoutX="15.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../icons/search.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </Pane>
+                                <Label layoutX="173.0" layoutY="8.0" prefHeight="28.0" prefWidth="115.0" text="Filter by :" textFill="WHITE">
+                                    <font>
+                                        <Font name="Roboto Black" size="19.0" />
+                                    </font>
+                                </Label>
+                                <JFXRadioButton fx:id="filterSubject" layoutX="167.0" layoutY="45.0" prefHeight="28.0" prefWidth="92.0" selected="true" styleClass="custom-jfx-check-box" text="Subject" textFill="#fffdfd">
+                                    <font>
+                                        <Font name="Roboto Black" size="12.0" />
+                                    </font>
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="filter" />
+                                    </toggleGroup>
+                                </JFXRadioButton>
+                                <JFXRadioButton fx:id="filterContent" layoutX="250.0" layoutY="45.0" prefHeight="28.0" prefWidth="92.0" styleClass="custom-jfx-check-box" text="Content" textFill="#fffdfd" toggleGroup="$filter">
+                                    <font>
+                                        <Font name="Roboto Black" size="12.0" />
+                                    </font>
+                                </JFXRadioButton>
+                                <JFXTextField fx:id="filterText" focusColor="#fcfcfc" labelFloat="true" layoutX="353.0" layoutY="42.0" maxWidth="214.0" minWidth="214.0" onAction="#searchNewsletter" onKeyTyped="#searchNewsletter" prefHeight="31.0" prefWidth="214.0" promptText="Search by Subject or Content" unFocusColor="WHITE">
+                                    <font>
+                                        <Font name="Roboto Black" size="13.0" />
+                                    </font>
+                                </JFXTextField>
+                                <JFXButton buttonType="RAISED" layoutX="596.0" layoutY="47.0" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #0073B7;" text="Search" textFill="#fffefe">
+                                    <font>
+                                        <Font name="Roboto Black" size="13.0" />
+                                    </font>
+                                    <graphic>
+                                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="14.0" wrappingWidth="19.0" />
+                                    </graphic>
+                                </JFXButton>
+                        <Button layoutX="24.0" layoutY="73.0" mnemonicParsing="false" onAction="#extratPDF" prefHeight="14.0" prefWidth="115.0" style="-fx-background-color: #0073B7;" text="PDF" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Regular" size="13.0" />
+                           </font>
+                        </Button>
+                        <FontAwesomeIconView fill="WHITE" glyphName="FILE" layoutX="33.0" layoutY="93.0" size="14.0" wrappingWidth="19.0" />
+                            </children>
+                        </AnchorPane>
+                                      <MaterialDesignIconView fill="WHITE" glyphName="BORDER_COLOR" layoutX="1039.0" layoutY="35.0" size="26" wrappingWidth="22.666656494140625" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>

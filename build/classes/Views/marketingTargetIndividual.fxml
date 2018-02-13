@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1100.0" stylesheets="@custom.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MarketingTargetIndividualController">
+    <children>
+        <StackPane prefHeight="680.0" prefWidth="1100.0">
+            <children>
+                <AnchorPane fx:id="holderAnchor" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <TableView fx:id="tableMti" layoutX="24.0" layoutY="173.0" prefHeight="490.0" prefWidth="706.0">
+                            <columns>
+                                <TableColumn minWidth="6.0" prefWidth="16.0" />
+                                <TableColumn fx:id="_id" text="ID" />
+                                <TableColumn fx:id="_age" prefWidth="86.0" text="Age" />
+                                <TableColumn fx:id="_field" prefWidth="121.0" text="Field" />
+                                <TableColumn fx:id="_maritalStatus" prefWidth="133.0" text="Marital Status" />
+                                <TableColumn fx:id="_marriage_period" prefWidth="150.0" text="Mariage Period" />
+                                <TableColumn fx:id="_result" prefWidth="119.0" text="Result" />
+                            </columns>
+                        </TableView>
+                        <AnchorPane layoutX="751.0" layoutY="49.0" prefHeight="611.0" prefWidth="320.0" styleClass="card-white">
+                            <children>
+                                <StackPane layoutX="47.0" layoutY="39.0" prefHeight="611.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <VBox fx:id="modifyVbox" prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                                <Pane prefHeight="180.0" prefWidth="320.0">
+                                                    <children>
+                                                        <ImageView fitHeight="180.0" fitWidth="320.0" pickOnBounds="true">
+                                                            <image>
+                                                                <Image url="@../Img/carrefour.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label fx:id="lblName11" alignment="CENTER" layoutX="5.0" layoutY="95.0" prefHeight="59.0" prefWidth="320.0" text="Enterprise Resource Planning" textFill="#31219e">
+                                                            <font>
+                                                                <Font name="Roboto Black" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </Pane>
+                                                <AnchorPane prefHeight="432.0" prefWidth="320.0">
+                                                    <children>
+                                                        <Separator layoutX="24.0" layoutY="84.0" prefHeight="0.0" prefWidth="290.0" />
+                                                        <Separator layoutX="24.0" layoutY="155.0" prefHeight="0.0" prefWidth="290.0" />
+                                                        <Separator layoutX="35.0" layoutY="295.0" prefHeight="15.0" prefWidth="283.0" />
+                                                        <Label fx:id="libAge" layoutX="28.0" layoutY="39.0" prefHeight="15.0" prefWidth="251.0" text="Age: ">
+                                                            <graphic>
+                                                                <FontAwesomeIconView fill="#404bb6" glyphName="BIRTHDAY_CAKE" size="16.0" wrappingWidth="28.0" />
+                                                            </graphic>
+                                                        </Label>
+                                                        <Label fx:id="libField" layoutX="28.0" layoutY="108.0" prefHeight="15.0" prefWidth="264.0" text="Field: ">
+                                                            <graphic>
+                                                                <FontAwesomeIconView fill="#404bb6" glyphName="DESKTOP" size="16.0" wrappingWidth="28.0" />
+                                                            </graphic>
+                                                        </Label>
+                                                        <Label fx:id="libMaritalStatus" layoutX="33.0" layoutY="183.0" prefHeight="15.0" prefWidth="264.0" text="Marital Status: ">
+                                                            <graphic>
+                                                                <FontAwesomeIconView fill="#404bb6" glyphName="HEART" size="16.0" wrappingWidth="28.0" />
+                                                            </graphic>
+
+                                                        </Label>
+                                                        <Label fx:id="libMariagePeriod" layoutX="32.0" layoutY="245.0" prefHeight="17.0" prefWidth="275.0" text="Mariage Period: ">
+                                                            <graphic>
+                                                                <FontAwesomeIconView fill="#404bb6" glyphName="CALENDAR" size="16.0" wrappingWidth="28.0" />
+                                                            </graphic>
+                                                        </Label>
+                                                        <Label fx:id="libResult" layoutX="39.0" layoutY="330.0" prefHeight="69.0" prefWidth="275.0" text="Result: ">
+                                                            <graphic>
+                                                                <FontAwesomeIconView fill="#404bb6" glyphName="COGS" size="16.0" wrappingWidth="28.0" />
+                                                            </graphic>
+                                                        </Label>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </VBox>
+                                        <VBox fx:id="addVbox" prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                                <Pane prefHeight="180.0" prefWidth="320.0">
+                                                    <children>
+                                                        <ImageView fitHeight="180.0" fitWidth="320.0" pickOnBounds="true">
+                                                            <image>
+                                                                <Image url="@../Img/carrefour.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label fx:id="lblName1" alignment="CENTER" layoutX="5.0" layoutY="95.0" prefHeight="59.0" prefWidth="320.0" text="Enterprise Resource Planning" textFill="#31219e">
+                                                            <font>
+                                                                <Font name="Roboto Black" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </Pane>
+                                                <AnchorPane prefHeight="432.0" prefWidth="320.0">
+                                                    <children>
+                                                        <Separator layoutX="24.0" layoutY="84.0" prefHeight="0.0" prefWidth="290.0" />
+                                                        <Separator layoutX="24.0" layoutY="155.0" prefHeight="0.0" prefWidth="290.0" />
+                                                        <Separator layoutX="35.0" layoutY="295.0" prefHeight="15.0" prefWidth="283.0" />
+                                                        <Label fx:id="libAge1" layoutX="28.0" layoutY="39.0" prefHeight="15.0" prefWidth="251.0" text="Age: ">
+                                                            <graphic>
+                                                                <FontAwesomeIconView fill="#404bb6" glyphName="BIRTHDAY_CAKE" size="16.0" wrappingWidth="28.0" />
+                                                            </graphic>
+                                                        </Label>
+                                                        <Label fx:id="libField1" layoutX="28.0" layoutY="108.0" prefHeight="15.0" prefWidth="264.0" text="Field: ">
+                                                            <graphic>
+                                                                <FontAwesomeIconView fill="#404bb6" glyphName="DESKTOP" size="16.0" wrappingWidth="28.0" />
+                                                            </graphic>
+                                                        </Label>
+                                                        <Label fx:id="libMaritalStatus1" layoutX="33.0" layoutY="183.0" prefHeight="15.0" prefWidth="264.0" text="Marital Status: ">
+                                                            <graphic>
+                                                                <FontAwesomeIconView fill="#404bb6" glyphName="HEART" size="16.0" wrappingWidth="28.0" />
+                                                            </graphic>
+                                                        </Label>
+                                                        <Label fx:id="libMariagePeriod1" layoutX="32.0" layoutY="245.0" prefHeight="17.0" prefWidth="275.0" text="Mariage Period: ">
+                                                            <graphic>
+                                                                <FontAwesomeIconView fill="#404bb6" glyphName="CALENDAR" size="16.0" wrappingWidth="28.0" />
+                                                            </graphic>
+                                                        </Label>
+                                                        <JFXTextField fx:id="textMariagePeriod" layoutX="35.0" layoutY="270.0" prefHeight="25.0" prefWidth="264.0" />
+                                                        <JFXTextField fx:id="textAge" layoutX="103.0" layoutY="35.0" prefHeight="25.0" prefWidth="200.0" />
+                                                        <JFXComboBox fx:id="cbMarital" layoutX="160.0" layoutY="183.0" prefHeight="39.0" prefWidth="151.0" />
+                                                        <JFXComboBox fx:id="cbField" layoutX="154.0" layoutY="106.0" prefHeight="39.0" prefWidth="151.0" />
+                                                        <JFXButton layoutX="36.0" layoutY="387.0" mnemonicParsing="false" onAction="#addMti" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: #1581d3;" text="Add" textFill="WHITE">
+                                                            <graphic>
+                                                                <FontAwesomeIconView fill="WHITE" glyphName="PLUS_SQUARE" size="18" translateX="70.0" translateY="1.0" wrappingWidth="19.0" />
+                                                            </graphic>                                                            
+                                                        </JFXButton>
+                                                        <JFXButton layoutX="187.0" layoutY="387.0" mnemonicParsing="false" onAction="#goCancel" prefHeight="31.0" prefWidth="124.0" style="-fx-background-color: #1581d3;" text="Cancel" textFill="WHITE">
+                                                            <graphic>
+                                                                <FontAwesomeIconView fill="WHITE" glyphName="TIMES_CIRCLE" size="18" translateX="70.0" translateY="1.0" wrappingWidth="19.0" />
+                                                            </graphic>                                                            
+                                                        </JFXButton>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </StackPane>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="26.0" layoutY="47.0" prefHeight="106.0" prefWidth="706.0" style="-fx-background-color: rgb(0, 115, 183,0.6); -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 5;">
+                            <children>
+                                <Pane layoutX="22.0" layoutY="-36.0" prefHeight="106.0" prefWidth="115.0" style="-fx-background-color: #0073B7; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4;">
+                                    <children>
+                                        <ImageView fitHeight="85.0" fitWidth="92.0" layoutX="15.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../icons/search.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </Pane>
+                                <JFXTextField fx:id="filterText" focusColor="#fcfcfc" labelFloat="true" layoutX="168.0" layoutY="42.0" maxWidth="399.0" minWidth="214.0" onKeyTyped="#searchMti" prefHeight="31.0" prefWidth="399.0" promptText="Search by any" unFocusColor="WHITE">
+                                    <font>
+                                        <Font name="Roboto Black" size="13.0" />
+                                    </font>
+                                </JFXTextField>
+                                <JFXButton buttonType="RAISED" layoutX="596.0" layoutY="47.0" onAction="#searchMti" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #0073B7;" text="Search" textFill="#fffefe">
+                                    <font>
+                                        <Font name="Roboto Black" size="13.0" />
+                                    </font>
+                                    <graphic>
+                                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="14.0" wrappingWidth="19.0" />
+                                    </graphic>
+                                </JFXButton>
+                                <Button layoutX="24.0" layoutY="73.0" mnemonicParsing="false" onAction="#extractCSV" prefHeight="14.0" prefWidth="115.0" style="-fx-background-color: #0073B7;" text="CSV" textFill="WHITE">
+                                    <font>
+                                        <Font name="Roboto Regular" size="13.0" />
+                                    </font>
+                                </Button>
+                                <FontAwesomeIconView fill="WHITE" glyphName="TABLE" layoutX="33.0" layoutY="93.0" size="14.0" wrappingWidth="19.0" />
+                            </children>
+                        </AnchorPane>
+                        <MaterialDesignIconView fill="WHITE" glyphName="BORDER_COLOR" layoutX="1039.0" layoutY="35.0" size="26" wrappingWidth="22.666656494140625" />
+                        <Button fx:id="add_btn" layoutX="165.0" layoutY="13.0" mnemonicParsing="false" onAction="#goAdd" style="-fx-background-color: #0073B7;" styleClass="fab">
+                            <graphic>
+                                <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="24.0" />
+                            </graphic>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>

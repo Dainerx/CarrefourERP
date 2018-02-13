@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MarketingHomeController">
+   <children>
+      <StackPane fx:id="trans" opacity="0.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Group>
+               <children>
+                  <AnchorPane fx:id="loadPane" prefHeight="431.0" prefWidth="384.0" />
+                  <JFXButton focusTraversable="false" layoutX="353.0" onAction="#closeclicked" prefHeight="30.0" prefWidth="13.0" text="X">
+                     <font>
+                        <Font name="Segoe UI Black" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Group>
+         </children>
+      </StackPane>
+      <AnchorPane id="AnchorPane" layoutX="19.0" layoutY="19.0" prefHeight="622.0" prefWidth="873.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="blur" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="139.0" prefWidth="1500.0" style="-fx-background-color: #4183D7;" AnchorPane.bottomAnchor="761.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="19.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Img/c-logo-white.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="Username" layoutX="64.0" layoutY="91.0" text="Username" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="emailUser" layoutX="63.0" layoutY="111.0" text="Email User" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imageUser" fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="86.0" onMouseEntered="#imageHover" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Img/iconUser.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="date" alignment="CENTER_RIGHT" layoutX="1291.0" layoutY="35.0" prefHeight="29.0" prefWidth="195.0" text="dateeeeee" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="timee" alignment="CENTER_RIGHT" layoutX="1291.0" layoutY="65.0" prefHeight="29.0" prefWidth="195.0" text="Jam" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="usernameUser" layoutX="85.0" layoutY="98.0" text="Username User" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="idUser" layoutX="85.0" layoutY="79.0" text="ID User" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="levelUser" layoutX="311.0" layoutY="32.0" text="level" visible="false" />
+                        <JFXButton alignment="CENTER" contentDisplay="RIGHT" focusTraversable="false" layoutX="1389.0" layoutY="101.0" onAction="#logout" prefHeight="34.0" prefWidth="99.0" text="Logout" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Img/icons8_Exit_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Label fx:id="exit" alignment="CENTER" contentDisplay="CENTER" layoutX="1460.0" layoutY="-1.0" onMouseClicked="#handleExitClicked" onMouseEntered="#setHover" onMouseExited="#setDefault" prefHeight="29.0" prefWidth="40.0" text="X" textFill="WHITE" AnchorPane.leftAnchor="1460.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+                           <font>
+                              <Font name="Segoe UI Black" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="minimize" alignment="CENTER" contentDisplay="CENTER" layoutX="1438.0" layoutY="-1.0" onMouseClicked="#handleMinimizeClicked" onMouseEntered="#setHover2" onMouseExited="#setDefault2" prefHeight="17.0" prefWidth="30.0" text="-" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="1438.0" AnchorPane.topAnchor="-1.0">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="20.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <JFXDrawer fx:id="drawer" layoutY="148.0" prefHeight="604.0" prefWidth="297.0">
+                     <children>
+                        <VBox fx:id="rh" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="297.0" style="-fx-background-color: #1f1f2e;">
+                           <children>
+                              <JFXButton fx:id="buttonHomerh" alignment="TOP_LEFT" contentDisplay="RIGHT" onAction="#overviewClicked" prefHeight="100.0" prefWidth="297.0" text="Home" textFill="WHITE" textOverrun="CLIP">
+                                 <graphic>
+                                    <ImageView fitHeight="93.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" translateX="160.0">
+                                       <image>
+                                          <Image url="@../Img/Home.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="menu_promotion_btn" alignment="TOP_LEFT" contentDisplay="RIGHT" onAction="#promotionClick" prefHeight="100.0" prefWidth="295.0" text="Promotions" textFill="WHITE" textOverrun="CLIP">
+                                 <graphic>
+                                    <ImageView fitHeight="93.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" translateX="130.0">
+                                       <image>
+                                          <Image url="@../icons/cart-73-64.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="menu_newsletters_btn" alignment="TOP_LEFT" contentDisplay="RIGHT" onAction="#newsletterClick" prefHeight="100.0" prefWidth="296.0" text="Newsletters" textFill="#f8f3f3" textOverrun="CLIP">
+                                 <graphic>
+                                    <ImageView fitHeight="93.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" translateX="130.0">
+                                       <image>
+                                          <Image url="@../icons/email-12-64.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="menu_mt_btn" alignment="TOP_LEFT" contentDisplay="RIGHT" onAction="#mtiClick" prefHeight="100.0" prefWidth="300.0" text="Market Targeting" textFill="WHITE" textOverrun="CLIP">
+                                 <graphic>
+                                    <ImageView fitHeight="93.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" translateX="100.0">
+                                       <image>
+                                          <Image url="@../icons/target-audience-64.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="menu_stat_btn" alignment="TOP_LEFT" contentDisplay="RIGHT" onAction="#statClick" prefHeight="100.0" prefWidth="300.0" text="Statistics" textFill="WHITE" textOverrun="CLIP">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="93.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" translateX="150.0">
+                                       <image>
+                                          <Image url="@../icons/pie-chart-64.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </JFXDrawer>
+                  <JFXHamburger fx:id="hamburger" layoutX="313.0" layoutY="153.0" />
+                <AnchorPane fx:id="rootPane" layoutX="352.0" layoutY="153.0" minHeight="0.0" minWidth="0.0" opacity="0.0" prefHeight="738.0" prefWidth="1134.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="352.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="153.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <JFXTextArea fx:id="MesNotesjTextArea" labelFloat="true" layoutY="12.0" prefHeight="120.0" prefWidth="296.0" translateX="5.0" translateY="750.0" />
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

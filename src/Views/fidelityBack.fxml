@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.FidelityBackController">
+    <children>
+        <Separator layoutX="9.0" layoutY="43.0" prefHeight="3.0" prefWidth="260.0" />
+        <Label layoutX="7.0" layoutY="5.0" prefHeight="30.0" prefWidth="269.0" style="-fx-background-color: #008B8B;" text="  Fidelity Account Add" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TableView fx:id="TWFidelity" layoutX="292.0" layoutY="42.0" onMouseClicked="#selecter" prefHeight="492.0" prefWidth="443.0">
+            <columns>
+                <TableColumn fx:id="numberAdmin1" prefWidth="148.0" text="Number of Points" />
+                <TableColumn fx:id="amountAdmin1" minWidth="0.0" prefWidth="104.0" text="Amount" />
+                <TableColumn fx:id="dateAdmin1" maxWidth="332.0" prefWidth="198.0" text="Date creation" />
+            </columns>
+        </TableView>
+        <GridPane layoutX="1.0" layoutY="87.0" prefHeight="220.0" prefWidth="281.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="111.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="162.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="49.0" minHeight="3.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="39.0" minHeight="0.0" prefHeight="39.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TextField fx:id="number" promptText="Number of points" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <TextField fx:id="amount" prefHeight="27.0" prefWidth="97.0" promptText="Amount" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Label text="Number of points" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Amount" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="10.0" layoutY="20.0" text="Creation Date" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <DatePicker fx:id="date" prefHeight="25.0" prefWidth="165.0" promptText=" Creation  Date " GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <Label prefHeight="17.0" prefWidth="81.0" text="First Name ">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="17.0" prefWidth="82.0" text="Last Name " GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="lastName" disable="true" promptText="Last Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="firstName" disable="true" promptText="First Name" GridPane.columnIndex="1" />
+                <ComboBox fx:id="idClientCombo" prefHeight="25.0" prefWidth="162.0" promptText="veuillez choisir le client" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label prefHeight="17.0" prefWidth="76.0" text="Id Client" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Separator prefHeight="4.0" prefWidth="181.0" GridPane.rowIndex="2" />
+                <Separator layoutX="10.0" layoutY="76.0" prefHeight="4.0" prefWidth="181.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+        <GridPane layoutX="20.0" layoutY="353.0" prefHeight="54.0" prefWidth="242.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="SubmitButton1" mnemonicParsing="false" onAction="#submit" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #5F9EA0;" text="Submit">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="editButton1" mnemonicParsing="false" onAction="#modif" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #5F9EA0;" text="Edit" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="DeleteButton1" mnemonicParsing="false" onAction="#deleteAccount" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #5F9EA0;" text="Delete" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="resetAccountFid" mnemonicParsing="false" onAction="#resetaccount" prefHeight="23.0" prefWidth="54.0" style="-fx-background-color: #5F9EA0;" text="Reset" GridPane.columnIndex="3">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+            </children>
+        </GridPane>
+        <Separator layoutX="9.0" layoutY="339.0" prefHeight="0.0" prefWidth="266.0" />
+        <Label layoutX="292.0" layoutY="5.0" prefHeight="30.0" prefWidth="443.0" style="-fx-background-color: #008B8B;" text="  List of  Fidelity Account" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

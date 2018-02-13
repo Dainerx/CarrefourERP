@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="effectFade" prefHeight="684.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginFXMLController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1062.0" style="-fx-background-color: #e0e2e5;" styleClass="mainFxmlClass">
+         <children>
+            <ImageView fitHeight="710.0" fitWidth="1119.0" layoutX="-503.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Img/Background.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="654.0" layoutY="192.0" prefHeight="372.0" prefWidth="354.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <JFXTextField fx:id="username" focusColor="#1581d3" layoutX="66.0" layoutY="131.0" prefHeight="25.0" prefWidth="256.0" promptText="username" unFocusColor="#c9c1c1">
+                     <font>
+                        <Font name="Segoe UI" size="12.0" />
+                     </font></JFXTextField>
+                  <JFXPasswordField fx:id="password" focusColor="#1581d3" layoutX="66.0" layoutY="211.0" prefHeight="25.0" prefWidth="256.0" promptText="Password" unFocusColor="#c9c1c1" />
+                  <JFXButton fx:id="login" layoutX="76.0" layoutY="303.0" onMouseClicked="#HandleLogin" prefHeight="33.0" prefWidth="189.0" ripplerFill="#dddbdb" style="-fx-background-color: #1581d3;" text="Log In" textFill="#f2efef" />
+                  <Label layoutX="121.0" layoutY="29.0" text="Sign In">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="47.0" fitWidth="43.0" layoutX="13.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Img/iconUser.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="14.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Img/iconPassword.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="110.0" layoutY="306.0" prefHeight="77.0" prefWidth="354.0" text="Welcome To Carrefour" textFill="WHITE">
+               <font>
+                  <Font size="32.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect>
+            </Label>
+            <Label layoutX="123.0" layoutY="373.0" text=" Think in new dimensions With Carrefour ERP ," textFill="#2c2929">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Label>
+            <Label fx:id="exit" layoutX="1037.0" layoutY="-5.0" onMouseClicked="#handleExitClicked" onMouseEntered="#setHover" onMouseExited="#setDefault" text="X">
+               <font>
+                  <Font name="Segoe UI Black" size="28.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="77.0" fitWidth="85.0" layoutX="223.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Img/carrefour.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
