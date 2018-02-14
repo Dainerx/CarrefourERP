@@ -281,7 +281,7 @@ public class PromotionController implements Initializable {
                 i++;
             }
             System.out.println(Arrays.toString(to));
-            sendFromGMail("dainerxx.21@gmail.com", "21541010oOdi@iedzszsde_password", to, "New promotion added", promotion.getContent());
+            sendFromGMail("email", "password", to, "New promotion added", promotion.getContent());
             buildPromotionTable();
             alert.setTitle("Information Dialog");
             alert.setHeaderText("An addition has occured successfully");
